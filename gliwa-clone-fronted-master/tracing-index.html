@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracing Page</title>
+
+    <link rel="stylesheet" href="libs/range-slider/range-slider.css">
+    <link rel="stylesheet" href="libs/switchery/switchery.min.css">
+    <link rel="stylesheet" href="css/tracing-index.css">
+</head>
+
+<body>
+    <div id="root">
+        <div id="control-container">
+            <div class="button-container tracing-container">
+                <span>Tracing</span>
+                <input type="checkbox" class="js-switch" />
+                <div class="loading-animation"></div>
+            </div>
+            <div class="button-container download-container">
+                <span>Download</span>
+                <button class="square-button disabled"></button>
+                <div class="loading-animation"></div>
+            </div>
+        </div>
+        <div id="canvas-container">
+            <canvas id="canvas-root" width="1000" height="1400"></canvas>
+            <input id="canvas-position-controller" type="range" min="0" max="100" step="0.1" style="display: none;">
+        </div>
+    </div>
+</body>
+
+<script src="libs/axios/axios.min.js"></script>
+<script src="libs/range-slider/range-slider.js"></script>
+<script src="libs/switchery/switchery.min.js"></script>
+
+<script src="data/config.js"></script>
+<script src="data/gatt.js"></script>
+<script src="js/tracing-index.js" type="module"></script>
+
+</html>
